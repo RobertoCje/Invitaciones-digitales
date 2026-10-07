@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Sofía & Alejandro</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts para un toque elegante -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="invitation-container">
+        <!-- Portada -->
+        <header class="hero">
+            <span class="subtitle">Nuestra Boda</span>
+            <h1>Sofía & Alejandro</h1>
+            <p class="date">14 de Noviembre, 2026</p>
+        </header>
+
+        <!-- Saludo Personalizado Dinámico -->
+        <section class="section greeting-section">
+            <h2 id="guest-greeting">¡Hola, invitado especial!</h2>
+            <p id="guest-passes" class="passes-text">Nos emociona mucho compartir este gran día contigo.</p>
+        </section>
+
+        <!-- Detalles de la Boda -->
+        <section class="section details">
+            <div class="detail-card">
+                <h3>Ceremonia</h3>
+                <p>Parroquia de Nuestra Señora de Fátima</p>
+                <p class="time">17:00 hrs</p>
+            </div>
+            <div class="detail-card">
+                <h3>Recepción</h3>
+                <p>Jardín Las Cúpulas</p>
+                <p class="time">19:30 hrs</p>
+            </div>
+        </section>
+
+        <!-- Formulario RSVP (Confirmación de Asistencia) -->
+        <section class="section rsvp-section">
+            <h2>Confirmación de Asistencia</h2>
+            <p class="instruction">Por favor confirma tu asistencia antes del 15 de Octubre.</p>
+
+            <form id="rsvp-form">
+                <!-- Campos ocultos para capturar datos de la URL -->
+                <input type="hidden" id="guest-name" name="nombre">
+                <input type="hidden" id="guest-assigned-passes" name="pases_asignados">
+
+                <div class="form-group">
+                    <label>¿Nos acompañarás?</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="asistencia" value="Sí Asistirá" required> ¡Sí, ahí estaré!</label>
+                        <label><input type="radio" name="asistencia" value="No Asistirá" required> No podré asistir</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="comentarios">Restricciones alimenticias o comentarios para los novios:</label>
+                    <textarea id="comentarios" name="comentarios" rows="3" placeholder="Ej. Vegetariano, alérgico al gluten..."></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="cta-button">Confirmar Asistencia</button>
+            </form>
+
+            <!-- Mensaje de Éxito (Oculto al inicio) -->
+            <div id="success-message" class="success-box" style="display: none;">
+                <h3>¡Gracias por confirmar!</h3>
+                <p id="success-text">Tu respuesta ha sido registrada con éxito para tus pases asignados.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Creado con elegancia por <strong>Vortex Web Studio</strong></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
